@@ -15,7 +15,7 @@
             return false;
         }
 
-        for($j=2; $j<=floor(sqrt($i));$j++){
+        for($j=2; $j<=ceil(sqrt($i));$j++){
             if($i%$j==0){
                 return false;
             }
