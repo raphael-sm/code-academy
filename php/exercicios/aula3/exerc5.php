@@ -1,12 +1,13 @@
 <?php
-    $original = "PHP e Legal";
+    $original = "PHP é Legal";
 
-    $tam = strlen($original)-1;
-    $copia = $original;
+    $tam = mb_strlen($original)-1;
+    $copia = mb_str_split($original);
+    $arr = mb_str_split($original);
 
     for($i = $tam; $i >= 0; $i--){
-        $original[$i] = $copia[$tam-$i];
+        $arr[$i] = $copia[$tam-$i];
     }
     
-    echo $original;
+    echo implode("", $arr);
 ?>
